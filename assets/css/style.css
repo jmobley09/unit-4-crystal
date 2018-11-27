@@ -1,0 +1,53 @@
+.Crystal-image {
+    width: 100px;
+    height: 100px;
+    margin: .5%;
+}
+
+.title {
+    width: 25%;
+    background-color: orange;
+    font-size: 200%;
+    font-weight: bolder;
+    color: white;
+    padding: 2%;
+    margin: .5%;
+    text-align: center;
+}
+
+.instructions {
+    background-color: bisque;
+    width: 50%;
+    font-weight: bold;
+    padding: 2%;
+    margin: .5%;
+}
+
+body {
+    background-color: aqua;
+}
+
+#ranDisplay {
+    background-color: green;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    margin: .5%;
+    font-size: 150%
+}
+
+#scores {
+    background-color: rgb(93, 104, 199);
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    margin: .5%;
+}
+
+#totalScore {
+    background-color: rgb(93, 104, 199);
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    margin: .5%;
+}
