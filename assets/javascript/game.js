@@ -24,9 +24,9 @@ function getRndInteger(min, max) {
 } 
 
 // Creates a random number between 19-120 and displays to page
-var randNum = getRndInteger(19,121);
+var randNum = Math.floor(Math.random() * 121) + 1;
 $('#ranDisplay').append(randNum);
-
+console.log(randNum);
 // variables to store the random numbers 1-12 for crystals
 var blueNum = getRndInteger(1,13);
 var greenNum = getRndInteger(1,13);
@@ -34,6 +34,7 @@ var purpNum = getRndInteger(1,13);
 var redNum = getRndInteger(1,13);
 
 // Creates var for total score
+var scoreText = 'Your total score is:'
 var totalScore = 0;
 
 
@@ -41,29 +42,43 @@ var totalScore = 0;
 // Adjusts the score once clicked and displays to the page
 $('#blue').click(function () {
     totalScore += blueNum;
-    $('#totalScore').text(totalScore);
+    $('#totalScore').text(scoreText + totalScore);
+    console.log(totalScore);
 });
 
 // click functionality for the green crystal
 $('#green').click(function () {
     totalScore += greenNum;
-    $('#totalScore').text(totalScore);
+    $('#totalScore').text(scoreText + totalScore);
 });
 
 // click functionality for the purple crystal
 $('#purple').click(function () {
     totalScore += purpNum;
-    $('#totalScore').text(totalScore);
+    $('#totalScore').text(scoreText + totalScore);
 });
 
 // click functionality for the red crystal
 $('#red').click(function () {
     totalScore += redNum;
-    $('#totalScore').text(totalScore);
+    $('#totalScore').text(scoreText + totalScore);
 });
 
 
+// Creats var for wins and loses
+var Wins = 0;
+var Loses = 0;
+
+// Calculates wins and loses
+if (totalScore == randNum) {
+    Wins += 1;
+    $('#scores').append('Wins:' + Wins);   
+}
+else if (totalScore > randNum) {
+    Loses += 1;
+    $('#scores').append('Loses:' + Loses);
+};
 
 // adds wins and loses to the screen
-$('#scores').apeend(wins);
-$('#scores').apeend(wins);
+$('#scores').append('Wins:' + Wins);
+$('#scores').append('Loses:' + Loses);
