@@ -15,6 +15,15 @@ var crystals = ['blue', 'green', 'purple', 'red'];
     $("#crystals").append(imgtag);
  };
 
+// Creates a random number between 19-120 and displays to page
 var randNum = Math.floor(Math.random() * 100) + 19;
 $('#ranDisplay').append(randNum);
- $('.Crystal-image').click();
+
+// click functionality for crystals
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+} 
+var CrysNum = getRndInteger(1,13);
+ $('.Crystal-image').click(function () {
+     console.log(CrysNum);
+ });
